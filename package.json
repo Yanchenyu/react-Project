@@ -1,0 +1,9 @@
+{
+  "name": "react-Project",
+  "version": "1.0.0",
+  "description": "react build one app",
+  "main": "index.js",
+  "repository": "https://github.com/Yanchenyu/react-Project.git",
+  "author": "Yanchenyu <chenyu.yan@insevo.cn>",
+  "license": "MIT"
+}
