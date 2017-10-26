@@ -1,15 +1,25 @@
 var webpack = require("webpack");
 var path = require("path");
-// var cleanWebpackPlugin = require('clean-webpack-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-    devtool: "cheap-module-eval-source-map",
     entry: "./index.js",
-    output: {
-		path: path.resolve(__dirname, 'dist'),
-        filename: 'build.js'
-	},
+    devtool: 'inline-source-map',
+    devServer: {
+      contentBase: './dist',
+      hot: true
+    },
+    plugins:[
+        new CleanWebpackPlugin(['dist']),
+        new HtmlWebpackPlugin({
+            title: 'Hot Module Replacement',
+            template: 'index.html',
+            inject: true
+        }),
+        new webpack.HotModuleReplacementPlugin()
+    ],
     module: {
         rules: [
             {
@@ -34,7 +44,8 @@ module.exports = {
             }
         ]
     },
-    plugins:[
-        new webpack.HotModuleReplacementPlugin()
-    ]
+     output: {
+		path: path.resolve(__dirname, 'dist'),
+        filename: '[name].bundle.js'
+	}
 }

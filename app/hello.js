@@ -5,11 +5,9 @@ class Hello extends Component {
         super(props)
     }
     static defaultProps = {
-        title: 'Hello World'
+        title: 'Hello World!!qwdqwd'
     };
-    componentDidMount(){
-        alert(111222)
-    }
+    componentDidMount(){}
     render(){
         return (
             <div>
