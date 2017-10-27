@@ -1,8 +1,8 @@
 import React from "react";
 import {render} from "react-dom";
-import Hello from "./app/hello"
+import App from "./view/app"
 
 render(
-    <Hello></Hello>,
+    <App></App>,
     document.getElementById("root")
 );
