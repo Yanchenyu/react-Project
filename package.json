@@ -37,6 +37,7 @@
     "babel-runtime": "^6.26.0",
     "clean-webpack-plugin": "^0.1.17",
     "events": "^1.1.1",
+    "immutable": "^3.8.2",
     "pubsub-js": "^1.5.7",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

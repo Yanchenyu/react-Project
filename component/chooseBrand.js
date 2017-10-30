@@ -1,6 +1,7 @@
 import React, {Component,PropTypes} from 'react'
+import BaseComponent from './baseComponent'
 
-class ChooseBrand extends Component {
+class ChooseBrand extends BaseComponent {
     static contextTypes = {
         color: PropTypes.string
     };
