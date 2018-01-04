@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import ChooseBrand from "../component/chooseBrand"
-import TestModule1 from "../component/addNumber"
-import TestModule2 from "../component/testModule"
+import ChooseBrand from "../component/ChooseBrand"
+import TestModule1 from "../component/AddNumber"
+import TestModule2 from "../component/TestModule"
 import {createNewHOCTest1, createNewHOCTest2} from '../component/HOCComponent'
 import BaseComponent from '../component/BaseHOCComponent'
 import style from '../css/chooseBrand.css'
