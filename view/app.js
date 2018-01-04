@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import ChooseBrand from "../component/chooseBrand"
 import TestModule1 from "../component/addNumber"
 import TestModule2 from "../component/testModule"
+import {createNewHOCTest1, createNewHOCTest2} from '../component/HOCComponent'
+import BaseComponent from '../component/BaseHOCComponent'
 import style from '../css/chooseBrand.css'
 
 export default class App extends Component {
@@ -27,6 +29,14 @@ export default class App extends Component {
         }
     }
     render(){
+        const newProps1 = {
+            age: 16
+        }
+        const newProps2 = {
+            name: 'XiaoHua'
+        }
+        const TestHOC1 = createNewHOCTest1(BaseComponent, newProps1);
+        const TestHOC2 = createNewHOCTest2(BaseComponent, newProps2);
         return (
             <div>
                 <ChooseBrand changeChoice={this.changeChoice}></ChooseBrand>
@@ -34,6 +44,10 @@ export default class App extends Component {
                 {/* 下面两个组件是兄弟组件，无嵌套关系，为了测试组件之间的通信 */}
                 <TestModule1></TestModule1>
                 <TestModule2></TestModule2>
+                <div>==============================================</div>
+                {/* 高阶组件 */}
+                <TestHOC1 />
+                <TestHOC2 />
             </div>
         )
     }
