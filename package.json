@@ -28,6 +28,7 @@
     "json-loader": "^0.5.7",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
+    "open-browser-webpack-plugin": "^0.0.5",
     "redux-devtools": "^3.4.0",
     "style-loader": "^0.18.2"
   },

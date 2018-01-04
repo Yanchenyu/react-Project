@@ -2,6 +2,7 @@ var webpack = require("webpack");
 var path = require("path");
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');//帮助打开浏览器
 
 
 module.exports = {
@@ -18,7 +19,10 @@ module.exports = {
             template: 'index.html',
             inject: true
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new OpenBrowserPlugin({
+            url: 'http://localhost:8080'
+        })
     ],
     module: {
         rules: [
