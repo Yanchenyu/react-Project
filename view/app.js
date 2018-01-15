@@ -17,6 +17,12 @@ export default class App extends Component {
         };
         this.changeChoice = this.changeChoice.bind(this);
     }
+    componentWillMount(){
+        console.log('父组件willMount')
+    }
+    componentDidMount(){
+        console.log('父组件didMount')
+    }
     changeChoice(arr){
         let radioValueArrString = arr.join(',');
         this.setState({
@@ -37,6 +43,7 @@ export default class App extends Component {
         }
         const TestHOC1 = createNewHOCTest1(BaseComponent, newProps1);
         const TestHOC2 = createNewHOCTest2(BaseComponent, newProps2);
+        console.log('父组件render')
         return (
             <div>
                 <ChooseBrand changeChoice={this.changeChoice}></ChooseBrand>

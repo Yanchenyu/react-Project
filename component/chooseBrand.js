@@ -28,7 +28,14 @@ class ChooseBrand extends BaseComponent {
         });
         this.props.changeChoice(radioValueArr); // 给父组件通信
     }
+    componentWillMount(){
+        console.log('子组件willMount')
+    }
+    componentDidMount(){
+        console.log('子组件didmount')
+    }
     render(){
+        console.log('子组件render')
         return (
             <div>
                 <p style={{textAlign: 'center',color: this.context.color}}>{this.props.title}</p>
